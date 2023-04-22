@@ -1,0 +1,149 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Mar 31 19:04:00 2023
+| Host         : LAPTOP-GM3DL76L running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    80 |
+| Unused register locations in slices containing registers |   218 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |           12 |
+|      4 |            2 |
+|      6 |            1 |
+|      8 |            4 |
+|     14 |            3 |
+|    16+ |           58 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |           12636 |         3243 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            1544 |          203 |
+| Yes          | No                    | No                     |             186 |           29 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             456 |           66 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------------------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+----------------+
+|                                 Clock Signal                                 |                            Enable Signal                            |                                  Set/Reset Signal                                 | Slice Load Count | Bel Load Count |
++------------------------------------------------------------------------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+----------------+
+| ~clk6p25m_BUFG                                                               |                                                                     |                                                                                   |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[4]_i_2_n_0                                                   | ad/led[4]_i_1_n_0                                                                 |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[6]_i_2_n_0                                                   | ad/led[6]_i_1_n_0                                                                 |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[0]_i_2_n_0                                                   | ad/led[0]_i_1_n_0                                                                 |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[7]_i_2_n_0                                                   | ad/led[7]_i_1_n_0                                                                 |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[2]_i_2_n_0                                                   | ad/led[2]_i_1_n_0                                                                 |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[1]_i_2_n_0                                                   | ad/led[1]_i_1_n_0                                                                 |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[3]_i_2_n_0                                                   | ad/led[3]_i_1_n_0                                                                 |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[5]_i_2_n_0                                                   | ad/led[5]_i_1_n_0                                                                 |                1 |              2 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[8]_i_2_n_0                                                   | ad/led[8]_i_1_n_0                                                                 |                1 |              2 |
+|  clk50MHz/clk50M                                                             |                                                                     |                                                                                   |                1 |              2 |
+|  ms/MC/middle_out                                                            |                                                                     |                                                                                   |                1 |              2 |
+|  myAudioOutput/JC_OBUF[2]                                                    | myAudioOutput/FSM_onehot_current_state_reg_n_0_[1]                  |                                                                                   |                2 |              4 |
+|  c2/slower_clock                                                             |                                                                     |                                                                                   |                1 |              4 |
+|  myAudioOutput/JC_OBUF[2]                                                    | myAudioOutput/FSM_onehot_current_state[3]_i_1_n_0                   |                                                                                   |                1 |              6 |
+|  clock_IBUF_BUFG                                                             |                                                                     | ms/MC/Inst_Ps2Interface/data_inter0                                               |                1 |              8 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/shift_frame                                 | ms/MC/Inst_Ps2Interface/reset_bit_count                                           |                2 |              8 |
+|  clock_IBUF_BUFG                                                             |                                                                     | ms/MC/Inst_Ps2Interface/clk_inter0                                                |                1 |              8 |
+|  clk_samp_OBUF_BUFG                                                          | ad/count1[31]_i_1_n_0                                               |                                                                                   |                3 |              8 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/y_sign_reg                                  |                                                                                   |                2 |             14 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0                | ms/MC/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0                              |                2 |             14 |
+|  clock_IBUF_BUFG                                                             |                                                                     | segments022_out                                                                   |                2 |             14 |
+|  clock_IBUF_BUFG                                                             | ms/MC/tx_data0                                                      |                                                                                   |                3 |             16 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/x_inc_reg[0]                                |                                                                                   |                1 |             16 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/y_inc_reg[0]                                |                                                                                   |                3 |             16 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/load_rx_data                                |                                                                                   |                1 |             16 |
+|  myAudioOutput/JC_OBUF[2]                                                    | myAudioOutput/FSM_onehot_current_state_reg_n_0_[1]                  | myAudioOutput/out[0]                                                              |                2 |             18 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/frame[9]_i_1_n_0                            |                                                                                   |                3 |             20 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0                | ms/MC/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0                              |                4 |             22 |
+|  myAudioOutput/JC_OBUF[2]                                                    | myAudioOutput/temp2                                                 |                                                                                   |                3 |             24 |
+|  clock_IBUF_BUFG                                                             | ms/MC/y_new_reg_n_0                                                 |                                                                                   |                4 |             24 |
+|  clock_IBUF_BUFG                                                             |                                                                     | clk_samp_OBUF_BUFG                                                                |                3 |             24 |
+|  clock_IBUF_BUFG                                                             | ms/MC/x_new_reg_n_0                                                 |                                                                                   |                4 |             24 |
+| ~ad/ad/CLK                                                                   |                                                                     |                                                                                   |                4 |             24 |
+|  clk_samp_OBUF_BUFG                                                          | ad/ad/E[0]                                                          | ad/count1[31]_i_1_n_0                                                             |                2 |             24 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_AS/signal_reg[0] |                                                                     |                                                                                   |                4 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_A/signal_reg[0]  |                                                                     |                                                                                   |                4 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_B/signal_reg[0]  |                                                                     |                                                                                   |                3 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_C/newClock       |                                                                     |                                                                                   |                4 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_CS/signal_reg[0] |                                                                     |                                                                                   |                4 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_D/signal_reg[0]  |                                                                     |                                                                                   |                4 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_E/signal_reg[0]  |                                                                     |                                                                                   |                4 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_F/signal_reg[0]  |                                                                     |                                                                                   |                4 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_DS/signal_reg[0] |                                                                     |                                                                                   |                3 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_FS/signal_reg[0] |                                                                     |                                                                                   |                4 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_G/signal_reg[0]  |                                                                     |                                                                                   |                3 |             26 |
+|  nolabel_line12524/improvement_task_out/display_tones/clock_GS/signal_reg[0] |                                                                     |                                                                                   |                4 |             26 |
+|  clock_IBUF_BUFG                                                             | ms/MC/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0                | ms/MC/Inst_Ps2Interface/clear                                                     |                4 |             28 |
+|  clock_IBUF_BUFG                                                             | nolabel_line12524/individual_task_out/button/count[0]_i_2_n_0       | nolabel_line12524/individual_task_out/button/count[0]_i_1__3_n_0                  |                4 |             28 |
+|  clk_samp_OBUF_BUFG                                                          |                                                                     |                                                                                   |                7 |             30 |
+| ~clk6p25m_BUFG                                                               |                                                                     | btnc_IBUF                                                                         |                4 |             34 |
+| ~clk6p25m_BUFG                                                               | O_disp/delay[0]_i_1_n_0                                             | btnc_IBUF                                                                         |                5 |             40 |
+|  clock_IBUF_BUFG                                                             |                                                                     | ms/MC/reset_timeout_cnt                                                           |                8 |             48 |
+|  clock_IBUF_BUFG                                                             |                                                                     | ms/MC/reset_periodic_check_cnt                                                    |                7 |             52 |
+|  clock_IBUF_BUFG                                                             |                                                                     | c1/clear                                                                          |                8 |             58 |
+|  clock_IBUF_BUFG                                                             |                                                                     | c2/count[0]_i_1__2_n_0                                                            |                8 |             58 |
+|  clk_samp_OBUF_BUFG                                                          |                                                                     | ad/count1[31]_i_1_n_0                                                             |                8 |             62 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_C/clear                |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_CS/COUNT[0]_i_1__0_n_0 |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_D/COUNT[0]_i_1__1_n_0  |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_DS/COUNT[0]_i_1__2_n_0 |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_E/COUNT[0]_i_1__3_n_0  |                8 |             64 |
+|  clk_samp_OBUF_BUFG                                                          | ad/led[8]_i_1_n_0                                                   | ad/display1                                                                       |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_A/COUNT[0]_i_1__8_n_0  |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | clk50MHz/COUNT[0]_i_1__12_n_0                                                     |                8 |             64 |
+|  clock_IBUF_BUFG                                                             | nolabel_line12524/group_task_out/nolabel_line64/count[0]_i_2__1_n_0 | nolabel_line12524/group_task_out/nolabel_line64/count[0]_i_1__0_n_0               |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | clk380Hz/COUNT[0]_i_1__15_n_0                                                     |                8 |             64 |
+|  clock_IBUF_BUFG                                                             | nolabel_line12524/individual_task_out/time_1sec/count[0]_i_2__0_n_0 | nolabel_line12524/individual_task_out/time_1sec/count[0]_i_1_n_0                  |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | clk20kHz/COUNT[0]_i_1__13_n_0                                                     |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | clk190Hz/COUNT[0]_i_1__14_n_0                                                     |                8 |             64 |
+| ~clk6p25m_BUFG                                                               | O_disp/state                                                        | btnc_IBUF                                                                         |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_GS/COUNT[0]_i_1__7_n_0 |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | ad/cd/clear                                                                       |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_G/COUNT[0]_i_1__6_n_0  |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_FS/COUNT[0]_i_1__5_n_0 |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_AS/COUNT[0]_i_1__9_n_0 |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_F/COUNT[0]_i_1__4_n_0  |                8 |             64 |
+|  clock_IBUF_BUFG                                                             |                                                                     | nolabel_line12524/improvement_task_out/display_tones/clock_B/COUNT[0]_i_1__10_n_0 |                8 |             64 |
+| ~clk6p25m_BUFG                                                               |                                                                     | O_disp/spi_word[39]_i_1_n_0                                                       |               17 |             90 |
+|  clock_IBUF_BUFG                                                             |                                                                     |                                                                                   |             3183 |          12260 |
++------------------------------------------------------------------------------+---------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+----------------+
+
+
